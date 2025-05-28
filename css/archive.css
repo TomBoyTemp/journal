@@ -1,0 +1,66 @@
+.issues-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem; */
+}
+
+.issue-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.issue-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.issue-card a {
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.issue-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2A1468;
+}
+
+.issue-date {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: auto;
+    text-align: right;
+    padding-top: 1rem;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    color: #666;
+}
+
+.error-message {
+    color: #d32f2f;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .issues-grid {
+        grid-template-columns: 1fr;
+    }
+}

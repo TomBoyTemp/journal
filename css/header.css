@@ -1,0 +1,156 @@
+/* Шапка */
+header{
+    width: 100%;
+    color:var(--primary-text-color);
+    background-color: var(--nav-active-bg);
+    min-width: 300px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-active-bg);
+    padding: 15px 20px;
+}
+
+.header-content{
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.logo {
+    font-size: clamp(12px, 1vmax, 16px);
+}
+
+.logo-defn{
+    padding-top: .2rem;
+    position: relative;
+    color: #ddd2d2;
+}
+
+.authBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#innerAuth{
+    display: none;
+}
+
+.authBtn button{
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--btn-bf-color);
+    padding: 5px 15px;
+    /* border-radius: var(--border-radius); */
+}
+
+/* Базовые стили */
+.subheader{
+    position: relative;
+    box-shadow: var(--box-shadow);
+    background-color: var(--nav-menu-bg);
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.subheader .nav-list > li:first-child{
+    display: none;
+}
+
+.subheader .nav-list {
+    display: flex; /* Делаем список flex-контейнером */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subheader .nav-list > li {
+    flex: 0 0 200px; /* Каждый li занимает равную ширину */
+    text-align: center; /* Центрируем текст */
+    position: relative;
+}
+
+.subheader .nav-list > li a {
+    display: block;
+    padding: 14px 20px;
+    width: 100%; /* Занимаем всю ширину li */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    min-width: 120px;
+    height: 100%;
+}
+
+.submenu {
+    display: none;
+    background-color: var(--sub-bg-color);
+    position: absolute;
+    text-align: center;
+    white-space: wrap;
+    transition: all 0.3s ease;
+}
+
+.submenu.show {
+    display: block ;
+    left: 0;
+    width: 100%;
+}
+
+.active-nav {
+    font-weight: 500;
+    background-color: #ab3cf5;
+}
+
+
+#userGreeting {
+    display: none;
+}
+
+@media (max-width:600px) {
+
+    .header{
+        flex-direction: column;
+        gap:20px;
+    }
+
+    #headerAuth {
+        gap: 10px ;
+    }
+
+    .subheader .nav-list > li {
+        flex-basis: auto;
+    }
+     .subheader .nav-list {
+        flex-direction: column;
+    }
+    
+    .subheader .nav-list > li:first-child {
+        display: block;
+    }
+    
+    .subheader .nav-list > li {
+        display: none;
+        background-color: var(--nav-menu-bg);
+        border-bottom: 1px solid var(--form-bg-color);
+    }
+    
+    .subheader.responsive .nav-list > li {
+        display: block !important;
+    }
+    
+    .submenu {
+        display: none !important;
+        position: static;
+        width: 100%;
+    }
+    
+    .submenu.show {
+        display: block !important;
+        background-color: var(--sub-bg-color);
+    }
+
+}

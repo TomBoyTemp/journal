@@ -1,0 +1,223 @@
+/* Основные стили для страницы рецензента */
+.review-invitations {
+    margin-bottom: 1.5rem;
+}
+
+.invitation-card {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--form-bg-color);
+}
+
+.invitation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.invitation-title {
+    font-size: 1.25rem;
+    color: var(--stratch-bg-color);
+    margin: 0;
+    flex: 1;
+    min-width: 250px;
+}
+
+.invitation-status {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #FFF3E0;  
+    color: #E65100;      
+    border-left: 3px solid #FFA000;
+}
+
+.status-accepted {
+     background-color: #E8F5E9;
+    color: #2E7D32;            
+    border-left: 3px solid #4CAF50;
+}
+
+.status-declined {
+    background-color: #FFEBEE; 
+    color: #C62828;            
+    border-left: 3px solid #F44336;
+}
+
+.status-completed {
+    background-color: #E3F2FD;  
+    color: #1565C0;            
+    border-left: 3px solid #2196F3;
+}
+
+.invitation-meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.meta-item {
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.meta-label {
+    font-weight: bold;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.invitation-actions {
+    /* height: 40px; */
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-form {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search-row input, 
+.search-row select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.search-btn, .reset-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-btn {
+    background-color: var(--stratch-bg-color);
+    color: white;
+}
+
+.reset-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+}
+
+
+.invitation-actions > button {
+    font-size: 16px;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--sub-bg-color);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.btn-disabled {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.error-message {
+    color: #dc3545;
+    padding: 1rem;
+    background: #f8d7da;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+@media (max-width: 900px) {
+    .invitation-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .invitation-status {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+    
+    .invitation-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

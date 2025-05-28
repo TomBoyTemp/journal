@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+/* Стили для модального окна */
+.modal-window {
+    display: none;
+    position: fixed;
+    grid-template-columns: minmax(auto, 400px);
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.alertMessage {
+    color: red; 
+    font-size: 12px;
+}
+
+#message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #494646;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 10000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+#message.show {
+  transform: translateY(0) !important;
+}
+
+#message.success {
+  transform: translate(0);
+  background-color: #4CAF50;
+}
+
+#message.error {
+    transform: translate(0);
+    background-color: #f44336; 
+}
+
+
+#loginFormContainer {
+    display: none;
+}
+
+#registerFormContainer{
+    display: none;
+}
+
+#forgotPasswordFormContent{
+    display: none;
+}
+
+.auth-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto;
+    max-width: 400px;
+    border-radius: 5px;
+    position: relative;
+    margin: 50px auto;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#rule {
+    color: #2037b9;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-form > p {
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#forgotPasswordFormContainer > p{
+    text-wrap: wrap;
+}
+
+#forgotPasswordFormContainer > p:last-child{
+    margin-top: 10px;
+}
+
+.required:after {
+    content: " *";
+    color: #e74c3c;
+}
+
+
+.forgot-password {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.forgot-password a {
+    color: #666;
+    text-decoration: none;
+    font-size:.9rem;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #EA591F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.form-associated {
+    margin-bottom: 10px;
+}
+
+#registerFormContainer > p{
+    margin-top: 10px;
+}
+
+.switch-form {
+    color: #2037b9;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toggle-content{
+  display: none;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  border-left: 2px solid #4CAF50;
+}
+
+.toggle-content > input {
+    padding: 10px;
+}
+
+#reviewer-interests {
+    height: 40px;
+    padding: 10px;
+}
+
+.form-associated:has(#toggle-checkbox:checked) ~ .toggle-content {
+  max-height: unset;
+  padding-left: 15px;
+  width: 100%;
+  margin-top: 10px;
+  border-left-color: #EA591F;
+}
+
+/* Кнопки для oauth авторизации */
+.oauth-buttons {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.oauth-divider {
+    position: relative;
+    margin: 20px 0;
+    color: #777;
+    font-size: 14px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+
+.oauth-divider::before, .oauth-divider::after {
+    content: "";
+    height: 1px;
+    background-color: #ddd;
+    display: inline-block;
+    flex: 1 0 auto; 
+    align-self: center;
+    max-width: 115px;    
+}
+
+.oauth-btn.oauth-vk {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #ddd;
+}
+
+.oauth-btn.oauth-vk:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.oauth-btn.oauth-github {
+    background-color: #24292e;
+    color: white;
+}
+
+.oauth-btn.oauth-github:hover {
+    background-color: #1a1e22;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.oauth-btn.oauth-yandex {
+    background-color: #FFCC00;
+    color: #000;
+}
+
+.oauth-btn.oauth-yandex:hover {
+    background-color: #e6b800;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+

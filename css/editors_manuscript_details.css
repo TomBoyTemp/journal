@@ -1,0 +1,163 @@
+.manuscript-details {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+}
+
+#manuscript-title {
+    margin-bottom: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.file-download{
+    background-color:var(--btn-bf-color);
+    color: var(--primary-text-color);
+    padding: .5rem 1rem;
+    border-radius:var(--border-radius);
+}
+
+.detail-label {
+    flex: 0 0 150px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.detail-value {
+    flex: 1;
+}
+
+.section-title {
+    color: var(--sub-bg-color);
+    margin: 1.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.reviewers-section, .reviews-section, .decision-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.reviewer-card, .review-card {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--form-bg-color);
+}
+
+.reviewer-header, .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.reviewer-name, .reviewer-name {
+    font-weight: bold;
+    color: var(--sub-bg-color);
+}
+
+.reviewer-expertise {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-select, .form-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-select > option {
+    white-space: break-spaces;
+}
+
+.btn-primary {
+    background: var(--form-bg-color);
+    color: var(--primary-text);
+}
+
+.btn-primary:hover {
+    background: var(--nav-active-bg);
+    color: white;
+}
+
+.btn-danger {
+    background: var(--btn-bf-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #d04a1a;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.error-message, .success-message {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: #dc3545;
+    background: #f8d7da;
+}
+
+.success-message {
+    color: #155724;
+    background: #d4edda;
+}
+
+@media (max-width: 768px) {
+    .detail-row {
+        flex-direction: column;
+    }
+    
+    .detail-label {
+        flex: 1;
+        margin-bottom: 0.25rem;
+    }
+    
+    .reviewer-header, .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #manuscript-file-link{
+        display:block;
+        width:fit-content;
+    }
+}

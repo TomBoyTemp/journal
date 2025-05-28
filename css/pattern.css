@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900; /* Диапазон весов */
+  font-stretch: 75% 100%; /* Диапазон ширины (опционально) */
+  font-style: normal;
+}
+
+:root{
+    --text-color: #000;
+    --general-bg-color: #6D31FF;
+    --sub-bg-color: #7e58dd;
+    --form-bg-color: #F6F6F6;
+    --btn-bf-color:#EA591F;
+    --primary-text-color:#fff;
+    --nav-active-bg: #4D19CC;
+    --nav-menu-bg: #5328c0;
+    --box-shadow: 0px 3px 3px 0 #2A1468, 3px 0px 3px 0 #2A1468;
+    --border-radius: 4px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:inherit;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-content{
+    max-width: 1600px;
+}
+
+.stratch-container-contant{
+    display: flex;
+    flex: 1;
+    background-color: var(--general-bg-color);
+    min-height: 100vh;
+}
+
+.container-content{
+    display: flex;
+    flex: 1;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: var(--general-bg-color);
+    padding: 1rem 0;
+}
+
+.sidebar {
+    flex-basis: 250px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 1rem;
+    border-radius: 3px;
+}
+
+.commercial {
+    flex-basis: 250px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-right: 1rem;
+    border-radius: 3px;
+}
+
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-width: 430px;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+footer{
+    background-color: #6347b1;
+    box-shadow: 0px -10px 23px -9px rgba(34, 60, 80, 0.2);
+}
+.footer-content{
+    background-color: #6347b1;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    .main-content{
+        min-width: unset;
+        width: 100%;
+    }
+    .container-content {
+        min-width: 300px;
+        flex-direction: column-reverse;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .commercial {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+}
